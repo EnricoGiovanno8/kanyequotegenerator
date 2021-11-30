@@ -20,7 +20,9 @@ class App extends React.Component {
   componentDidMount() {
     let data = JSON.parse(localStorage.getItem("listOfQuotes"))
 
-    this.setState({ listOfQuote: data })
+    if (data) {
+      this.setState({ listOfQuote: data })
+    }
   }
 
   getQuote = () => {
