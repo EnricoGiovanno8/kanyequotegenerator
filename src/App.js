@@ -72,7 +72,7 @@ class App extends React.Component {
           <h5>Quote: {this.state.quote}</h5>
           <Button variant="success" style={{ marginBottom: '5vh'}} onClick={this.saveQuote}>Save</Button>
         </div> : null}
-        {this.state.listOfQuote.length !== 0 ? 
+        {this.state.listOfQuote && this.state.listOfQuote.length !== 0 ? 
         <div>
           <h5>List Of Quotes</h5>
           <Table striped bordered hover>
